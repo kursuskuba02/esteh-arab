@@ -1,0 +1,926 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.screen {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+/* Menu Page Styles */
+.menu-page {
+    background: linear-gradient(135deg, #6d4c41 0%, #3e2723 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu-container {
+    text-align: center;
+    padding: 2rem;
+}
+
+.game-title {
+    font-size: 3.5em;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.menu-button {
+    font-size: 1.2em;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    background: #8d6e63;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.menu-button:hover {
+    transform: translateY(-3px);
+    background: #a1887f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.credits {
+    margin-top: 2rem;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* Tutorial Page Styles */
+.tutorial-page {
+    background: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.tutorial-container {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-title {
+    text-align: center;
+    color: #212529;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.tutorial-content {
+    margin-bottom: 2rem;
+}
+
+.instruction-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.step-number {
+    background: #4c6ef5;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.tutorial-footer {
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s, background-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.back-button {
+    background: #4a5568;
+}
+
+.menu-button {
+    background: #2d3748;
+}
+
+.play-button {
+    background: #48bb78;
+}
+
+.nav-button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+.number-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.number-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.number-item:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.number-item .arabic {
+    font-size: 1.5rem;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+
+.number-item .latin {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.number-item .number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.quantity-btn {
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    background: #4a5568;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.quantity-btn:hover {
+    background: #2d3748;
+}
+
+.quantity {
+    min-width: 25px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+}
+
+.action-button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #4a5568;
+    color: white;
+    transition: transform 0.2s, background-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.action-button:hover {
+    background: #2d3748;
+    transform: translateY(-2px);
+}
+
+.add-btn {
+    background: #48bb78;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.add-btn:hover {
+    background: #38a169;
+    transform: translateY(-2px);
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.right-buttons {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Emotion Popup Styles */
+.emotion-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 5rem;
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.emotion-popup.show {
+    animation: popupAnimation 1s ease-out forwards;
+}
+
+@keyframes popupAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+.emotion-popup.happy {
+    color: #48bb78;
+    text-shadow: 0 0 20px rgba(72, 187, 120, 0.5);
+}
+
+.emotion-popup.angry {
+    color: #e53e3e;
+    text-shadow: 0 0 20px rgba(229, 62, 62, 0.5);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .tutorial-container {
+        padding: 1.5rem;
+    }
+
+    .tutorial-title {
+        font-size: 1.5rem;
+    }
+
+    .step {
+        font-size: 0.9em;
+    }
+}
+
+/* Learning Page Styles */
+.learning-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+.learning-container h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.instructions {
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.instructions p {
+    margin: 15px 0;
+    font-size: 1.1em;
+}
+
+.number-guide {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.number-guide h3 {
+    margin-bottom: 15px;
+}
+
+.number-guide ul {
+    list-style: none;
+}
+
+.number-guide li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+/* Game Page Styles */
+.game-page {
+    background: #f5f5f5;
+    min-height: 100vh;
+    height: 100vh; /* Force full height */
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.game-content {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    height: calc(100vh - 120px);
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-buttons {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.right-buttons {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.action-button, .back-button, .help-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    white-space: nowrap;
+    min-width: 140px;
+}
+
+.action-button {
+    font-weight: 500;
+}
+
+#clear-tray {
+    background: #ff6b6b;
+    color: white;
+}
+
+#clear-tray:hover {
+    background: #fa5252;
+}
+
+#serve-order {
+    background: #51cf66;
+    color: white;
+}
+
+#serve-order:hover {
+    background: #40c057;
+}
+
+.back-button {
+    background: #868e96;
+    color: white;
+}
+
+.back-button:hover {
+    background: #495057;
+}
+
+.help-button {
+    background: #4c6ef5;
+    color: white;
+}
+
+.help-button:hover {
+    background: #3b5bdb;
+}
+
+.game-header {
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stats {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.customer-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.customer-emoji {
+    font-size: 3rem;
+    animation: customerAppear 0.5s ease-out;
+}
+
+.patience-container {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    height: 25px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 0.5rem;
+}
+
+#patience-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #51cf66, #ffd43b, #ff6b6b);
+    width: 100%;
+    transition: width 0.2s ease;
+}
+
+#timer-angry, #timer-happy {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    z-index: 1;
+    padding: 0 0.5rem;
+}
+
+#timer-angry {
+    left: 5px;
+}
+
+#timer-happy {
+    right: 5px;
+}
+
+.speech-bubble {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    min-width: 120px;
+    text-align: center;
+}
+
+.speech-bubble::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent rgba(255, 255, 255, 0.9) transparent transparent;
+}
+
+.left-panel, .right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.panel-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    color: #000000;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tray {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 0.5rem;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.action-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.action-button {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s, background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.clear-btn {
+    background: #e53e3e;
+}
+
+.clear-btn:hover {
+    background: #c53030;
+}
+
+.serve-btn {
+    background: #48bb78;
+}
+
+.serve-btn:hover {
+    background: #38a169;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tea-button {
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tea-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.tea-button.selected {
+    background: rgba(72, 187, 120, 0.2);
+    border-color: #48bb78;
+    box-shadow: 0 0 10px rgba(72, 187, 120, 0.3);
+}
+
+.quantity-panel {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.selected-drink {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.quantity-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: #4a5568;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.quantity-btn:hover {
+    background: #2d3748;
+}
+
+.quantity {
+    min-width: 32px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.add-btn {
+    background: #48bb78;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.add-btn:hover {
+    background: #38a169;
+    transform: translateY(-2px);
+}
+
+.navigation-buttons {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+}
+
+.nav-button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #4a5568;
+    color: white;
+    transition: transform 0.2s, background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 150px;
+}
+
+.nav-button:hover {
+    background: #2d3748;
+    transform: translateY(-2px);
+}
+
+.help-button {
+    background: #4c51bf;
+}
+
+.help-button:hover {
+    background: #434190;
+}
+
+.game-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.8rem;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+    position: relative;
+    z-index: 0;
+}
+
+.arabic-text {
+    font-family: 'Noto Sans Arabic', sans-serif;
+    font-size: 1.6rem;
+}
+
+.watermark {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: white;
+}
+
+.watermark p {
+    margin: 5px 0;
+}
+
+.kursuskuba-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.kursuskuba-link:hover {
+    color: #e6e6e6;
+    text-decoration: underline;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .game-content {
+        flex-direction: column;
+        height: calc(100vh - 300px);
+    }
+
+    .left-panel {
+        flex: 2;
+    }
+
+    .right-panel {
+        flex: 1;
+    }
+
+    .tray {
+        min-height: 80px;
+        max-height: calc(100% - 80px);
+    }
+
+    .menu-options {
+        gap: 0.5rem;
+    }
+
+    .tea-button {
+        padding: 0.6rem;
+        font-size: 0.9em;
+    }
+
+    .action-button, .back-button, .help-button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9em;
+        min-width: 120px;
+    }
+    
+    .button-container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .left-buttons, .right-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .game-footer {
+        padding: 0.8rem 0;
+    }
+    
+    .back-button, .help-button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9em;
+    }
+}
+
+/* Desktop Frame */
+@media (min-width: 1024px) {
+    .game-container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 30px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    }
+
+    .game-content {
+        gap: 30px;
+    }
+
+    .tray {
+        min-height: 300px;
+    }
+
+    .tea-button {
+        padding: 20px;
+        font-size: 1.2em;
+    }
+
+    .action-button, .back-button, .help-button {
+        padding: 15px;
+        font-size: 1.2em;
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Es Teh Arab - Permainan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Noto+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="game-page">
+    <div class="game-container">
+        <div class="game-header">
+            <div class="header-content">
+                <div class="stats">
+                    <div class="level">🏆 <span id="level">1</span></div>
+                    <div class="fulus">💰 <span id="fulus">0</span></div>
+                    <div class="game-timer">⏰ <span id="timer">3:00</span></div>
+                </div>
+                
+                <div class="customer-info">
+                    <div id="customer-emoji" class="customer-emoji"></div>
+                    <div id="customer-speech" class="speech-bubble" aria-live="polite"></div>
+                </div>
+            </div>
+
+            <div class="patience-container">
+                <div id="timer-angry">😠</div>
+                <div id="patience-bar"></div>
+                <div id="timer-happy">😊</div>
+            </div>
+        </div>
+
+        <div class="game-content">
+            <div class="left-panel">
+                <h2 class="panel-title">القائمة</h2>
+                <div class="menu-grid">
+                    <button class="tea-button" data-drink="☕">☕</button>
+                    <button class="tea-button" data-drink="🍵">🍵</button>
+                    <button class="tea-button" data-drink="🫖">🫖</button>
+                    <button class="tea-button" data-drink="🧋">🧋</button>
+                </div>
+                <div class="quantity-panel">
+                    <div class="selected-drink">
+                        <span>Terpilih:</span>
+                        <span class="selected-icon">-</span>
+                    </div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus-btn">-</button>
+                        <span class="quantity">0</span>
+                        <button class="quantity-btn plus-btn">+</button>
+                    </div>
+                    <button class="add-btn">
+                        <span>👉</span>
+                        <span>Tambahkan</span>
+                    </button>
+                </div>
+            </div>
+            <div class="right-panel">
+                <h2 class="panel-title">الصينية</h2>
+                <div id="tray" class="tray" aria-label="Nampan pesanan"></div>
+                <div class="action-container">
+                    <button id="clear-tray" class="action-button clear-btn">
+                        <span>🗑️</span>
+                        <span>Bersihkan</span>
+                    </button>
+                    <button id="serve-order" class="action-button serve-btn">
+                        <span>✨</span>
+                        <span>Sajikan</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation-buttons">
+            <button class="nav-button help-button" onclick="window.location.href='tutorial.html'">
+                <span>❓</span>
+                <span>Bantuan</span>
+            </button>
+            <button class="nav-button back-button" onclick="window.location.href='index.html'">
+                <span>⬅️</span>
+                <span>Kembali</span>
+            </button>
+        </div>
+
+        <div id="popup-emotion" class="emotion-popup" aria-hidden="true"></div>
+
+        <script src="ui.js"></script>
+        <script src="game.js"></script>
+    </div>
+</body>
+</html>
